@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <RootNamespace>miry.manage_personne.domain</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Models\" />
+    <None Remove="IRepositories\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\" />
+    <Folder Include="IRepositories\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\miry.manage-base.domain\miry.manage-base.domain.csproj" />
+  </ItemGroup>
+</Project>

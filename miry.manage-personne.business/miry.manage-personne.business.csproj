@@ -1,0 +1,44 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <RootNamespace>miry.manage_personne.business</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Repositories\" />
+    <None Remove="DataContext\" />
+    <None Remove="MappingProfiles\" />
+    <None Remove="Dtos\" />
+    <None Remove="Dtos\PersonneDtos\" />
+    <None Remove="IServices\" />
+    <None Remove="Services\" />
+    <None Remove="Dtos\Filters\" />
+    <None Remove="AsyncServices\" />
+    <None Remove="Dtos\AsyncDtos\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Repositories\" />
+    <Folder Include="DataContext\" />
+    <Folder Include="MappingProfiles\" />
+    <Folder Include="Dtos\" />
+    <Folder Include="Dtos\PersonneDtos\" />
+    <Folder Include="IServices\" />
+    <Folder Include="Services\" />
+    <Folder Include="Dtos\Filters\" />
+    <Folder Include="AsyncServices\" />
+    <Folder Include="Dtos\AsyncDtos\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\miry.manage-personne.domain\miry.manage-personne.domain.csproj" />
+    <ProjectReference Include="..\miry.manage-base.repository\miry.manage-base.repository.csproj" />
+    <ProjectReference Include="..\miry.manage-base.service\miry.manage-base.service.csproj" />
+    <ProjectReference Include="..\miry.async-service.client\miry.async-service.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.11" />
+    <PackageReference Include="AutoMapper" Version="12.0.1" />
+  </ItemGroup>
+</Project>
