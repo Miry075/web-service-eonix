@@ -48,6 +48,7 @@ namespace miry.manage_personne.api.Controllers
             }
         }
 
+        //[ODa]
         [HttpGet("{keyName?}/{keyFirstname?}", Name = "GetPersonnesByFilter")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]

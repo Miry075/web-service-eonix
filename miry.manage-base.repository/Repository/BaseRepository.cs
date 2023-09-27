@@ -63,7 +63,8 @@ namespace miry.manage_base.repository.Repository
                 {
                 throw new ArgumentNullException("Not found in Db");
                 }
-                dbSet.Attach(entity);
+
+                dbSet.Entry(inDb).State = EntityState.Detached;
                 dbSet.Entry(entity).State = EntityState.Modified;
             }
             catch
